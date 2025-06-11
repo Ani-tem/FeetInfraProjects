@@ -30,8 +30,8 @@ A project designed to streamline and enhance infrastructure management solutions
 FeetInfraProjects/
 │
 ├── backend/             # Express.js APIs
-├── frontend/            # React/Next.js frontend
-├── database/            # SQL/MongoDB schemas and seeders
+├── frontend/            # React frontend
+├── database/            # SQL schemas and seeders
 ├── docs/                # API and project documentation
 └── README.md
 ```
