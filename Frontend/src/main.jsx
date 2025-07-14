@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ConstructionHomepage from './Home.jsx';
 import AboutUsPage from './Aboutus.jsx';
 import ProjectsPage from './Projects.jsx';
-import ContactPage from './Contact.jsx';
+import ContactPage from './contact.jsx';
 import AdminDashboard from './Admin.jsx';
 import './index.css';
 
