@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import Animated from './components/AnimatedParticles'
-import Floating from './components/FloatIcon';
-import Footer from './components/footer';
-import NavigationAuto from './components/Nav';
-import Mouse from './components/Mouse';
-import ImageSlideshow from './components/ImageSlideshow';
+import Animated from './components/AnimatedParticles.jsx'
+import Floating from './components/FloatIcon.jsx';
+import Footer from './components/footer.jsx';
+import NavigationAuto from './components/Nav.jsx';
+import Mouse from './components/Mouse.jsx';
+import ImageSlideshow from './components/ImageSlideshow.jsx';
 
 const ConstructionHomepage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());

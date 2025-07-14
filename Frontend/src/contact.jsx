@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Navigation from './components/Nav';
-import Footer from './components/footer';
-import Floating from './components/FloatIcon';
-import Animation from './components/AnimatedParticles';
-import Mouse from './components/Mouse';
+import Floating from './components/FloatIcon.jsx';
+import Footer from './components/footer.jsx';
+import Mouse from './components/Mouse.jsx';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

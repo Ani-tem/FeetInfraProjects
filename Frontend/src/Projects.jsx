@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Animated from './components/AnimatedParticles';
-import Floating from './components/FloatIcon';
-import Footer from './components/footer';
-import NavigationAuto from './components/Nav';
-import Mouse from './components/Mouse';
+import Animated from './components/AnimatedParticles.jsx'
+import Floating from './components/FloatIcon.jsx';
+import Footer from './components/footer.jsx';
+import NavigationAuto from './components/Nav.jsx';
+import Mouse from './components/Mouse.jsx';
+import ImageSlideshow from './components/ImageSlideshow.jsx';
 
 
 const ProjectsPage = () => {
