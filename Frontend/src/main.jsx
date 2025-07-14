@@ -5,7 +5,7 @@ import ConstructionHomepage from './Home.jsx';
 import AboutUsPage from './Aboutus.jsx';
 import ProjectsPage from './Projects.jsx';
 import ContactPage from './contact.jsx';
-import AdminDashboard from './Admin.jsx';
+import AdminDashboard from './admin.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
