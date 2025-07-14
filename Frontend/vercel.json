@@ -1,7 +1,6 @@
 {
-  "buildCommand": "npm ci && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "framework": "vite",
+  "cleanUrls": true
 }
