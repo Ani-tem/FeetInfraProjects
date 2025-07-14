@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Navigation from './components/Nav';
-import FloatingIcon from './components/FloatIcon';
-import Footer from './components/footer';
-import Animated from './components/AnimatedParticles';
-import Mouse from './components/Mouse';
+import Navigation from './components/Nav.jsx';
+import FloatingIcon from './components/FloatIcon.jsx';
+import Footer from './components/footer.jsx';
+import Animated from './components/AnimatedParticles.jsx';
+import Mouse from './components/Mouse.jsx';
 
 const AboutUsPage = () => {
   const teamMembers = [
