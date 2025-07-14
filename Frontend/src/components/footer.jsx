@@ -11,17 +11,7 @@ const Footer = () =>{
               <p className="text-gray-400 mb-6 max-w-md">
                 Building exceptional structures with precision, innovation, and unwavering commitment to excellence since 2010.
               </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer">
-                  <span className="text-white">f</span>
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer">
-                  <span className="text-white">t</span>
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer">
-                  <span className="text-white">in</span>
-                </div>
-              </div>
+              
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">Services</h4>

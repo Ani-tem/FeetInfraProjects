@@ -1,6 +1,6 @@
 const Particle = ({ delay, size, x, y }) => (
     <div
-      className="absolute rounded-full bg-orange-500 opacity-20 animate-pulse"
+      className="absolute rounded-full bg-blue-500 opacity-20 animate-pulse"
       style={{
         width: `${size}px`,
         height: `${size}px`,
