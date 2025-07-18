@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Floating from './components/FloatIcon.jsx';
 import Footer from './components/footer.jsx';
 import Mouse from './components/Mouse.jsx';
+import Navigation from './components/Nav.jsx';
+import Animation from './components/AnimatedParticles.jsx';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -112,65 +114,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(180deg);
-          }
-        }
-        
-        .animate-fadeInUp {
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        .animate-slideInLeft {
-          animation: slideInLeft 0.8s ease-out forwards;
-        }
-        
-        .animate-slideInRight {
-          animation: slideInRight 0.8s ease-out forwards;
-        }
-        
-        .animate-pulse-slow {
-          animation: pulse 2s infinite;
-        }
-      `}</style>
+     
       
       <div className="w-screen min-h-screen bg-black text-white overflow-x-hidden">
         <Mouse/>
