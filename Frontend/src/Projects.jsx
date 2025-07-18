@@ -4,10 +4,6 @@ import Floating from './components/FloatIcon.jsx';
 import Footer from './components/footer.jsx';
 import NavigationAuto from './components/Nav.jsx';
 import Mouse from './components/Mouse.jsx';
-import ImageSlideshow from './components/ImageSlideshow.jsx';
-
-
-
 const ProjectsPage = () => {
   const [scrollY, setScrollY] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
