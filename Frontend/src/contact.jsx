@@ -420,15 +420,19 @@ const ContactPage = () => {
         <Footer/>
         
         {/* Admin Button */}
-        <div className="fixed bottom-4 right-4 z-50">
-          <button
-            onClick={() => window.location.href = '/admin'}
-            className="group relative px-4 py-2 bg-orange-500 text-white rounded-full font-semibold text-sm overflow-hidden transition-all duration-300 hover:bg-orange-600 hover:scale-105 shadow-lg"
-          >
-            <span className="relative z-10">Admin</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-          </button>
+       
+                <div className="relative">
+          <div className="absolute bottom-4 right-4 z-50 mb-4 mr-4">
+            <button
+              onClick={() => window.location.href = '/admin'}
+              className="group relative px-4 py-2 bg-orange-500 text-white rounded-full font-semibold text-sm overflow-hidden transition-all duration-300 hover:bg-orange-600 hover:scale-105 shadow-lg"
+            >
+              <span className="relative z-10">Admin</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </button>
+          </div>
         </div>
+
       </div>
     </>
   );

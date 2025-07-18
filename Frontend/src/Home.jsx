@@ -5,7 +5,8 @@ import Floating from './components/FloatIcon.jsx';
 import Footer from './components/footer.jsx';
 import NavigationAuto from './components/Nav.jsx';
 import Mouse from './components/Mouse.jsx';
-import ImageSlideshow from './components/ImageSlideshow.jsx';
+import ImageSlideshow from './components/ImageSlideShow.jsx';
+
 
 const ConstructionHomepage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
