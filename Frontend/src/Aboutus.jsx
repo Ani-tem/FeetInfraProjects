@@ -94,7 +94,7 @@ const AboutUsPage = () => {
                 </span>
                 <br />
                 <span className="inline-block animate-slide-up" style={{ animationDelay: '0.4s' }}>
-                  <span className="text-white">FEET INFRA</span>
+                  <span className="text-white">FEETS INFRA PPROJECTS</span>
                 </span>
               </h1>
             </div>
@@ -162,7 +162,7 @@ const AboutUsPage = () => {
               
               {/* Floating badge */}
               <div className="absolute -top-8 -right-8 bg-white text-black p-6 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">2010</div>
+                <div className="text-2xl font-bold">2016</div>
                 <div className="text-xs opacity-90">Founded</div>
               </div>
             </div>
