@@ -138,19 +138,17 @@ const AboutUsPage = () => {
               </h2>
               <div className="space-y-6 text-gray-300 text-base lg:text-lg leading-relaxed">
                 <p>
-                  What started as a small family business in 2010 has grown into one of the region's 
-                  most trusted construction companies. Founded by Leela Akshith with just a 
-                  pickup truck and a dream, Feet Infra has built over 200 projects.
+                  Feets Infra Projects was founded nine years ago with a vision to redefine excellence in the construction industry. 
+                  What began as an ambitious dream during our undergraduate years has now grown into a trusted and dynamic provider of comprehensive construction solutions.
                 </p>
                 <p>
-                  Our journey began with residential renovations and has evolved to include 
-                  commercial complexes, industrial facilities, and landmark architectural projects. 
-                  Through every project, we've maintained our core values of quality, integrity, and innovation.
+                  At a time when most were just beginning their careers, we took the bold step of establishing a company grounded in passion, determination, and a commitment to quality. Since then, we have successfully delivered a wide range of residential, commercial, and infrastructure projects across Telangana and Andhra Pradesh.
                 </p>
                 <p>
-                  Today, with a team of over 50 skilled professionals, we continue to push 
-                  boundaries in construction technology while never forgetting the personal 
-                  touch that built our reputation.
+                  Our journey has been shaped by relentless hard work, unwavering values, and a team that shares our dedication to excellence. At Feets Infra Projects, we believe that quality is non-negotiable — and this principle continues to be the foundation of every project we undertake.
+                </p>
+                <p>
+                  While the past nine years have been a testament to our resilience and growth, we see this as just the beginning. With a clear vision and a passionate team, we are committed to continuing our journey with integrity, innovation, and excellence.
                 </p>
               </div>
             </div>
