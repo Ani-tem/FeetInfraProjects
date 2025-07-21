@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle'; // Import the new component
 
-const NavigationAuto = () => {
+const NavigationAuto = ({ theme, toggleTheme }) => { // Accept theme props
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
 
-  // Get current page from URL
   const getCurrentPage = () => {
     if (typeof window !== 'undefined') {
       const path = window.location.pathname;
       if (path === '/' || path === '/home') return 'home';
-      return path.substring(1); // Remove leading slash
+      return path.substring(1);
     }
     return 'home';
   };
@@ -17,7 +17,6 @@ const NavigationAuto = () => {
   useEffect(() => {
     setCurrentPage(getCurrentPage());
     
-    // Close mobile menu when window is resized to desktop
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsMobileMenuOpen(false);
@@ -45,19 +44,19 @@ const NavigationAuto = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-black bg-opacity-95 backdrop-blur-lg border-b border-gray-800/50">
+      {/* Updated nav classes for theme switching */}
+      <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800/50 transition-colors duration-300">
         <div className="w-full px-6 py-4">
           <div className="flex justify-between items-center max-w-7xl mx-auto">
-            {/* Logo */}
             <a href='/home' onClick={() => handleNavClick('home')}>
               <div className="text-2xl sm:text-3xl font-bold tracking-wider cursor-pointer">
-                <span className="text-white">FEET INFRA</span>
+                {/* Updated text colors */}
+                <span className="text-gray-900 dark:text-white">FEET INFRA</span>
                 <span className="text-orange-500">Projects</span>
               </div>
             </a>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item, index) => {
                 const isActive = item.toLowerCase() === currentPage.toLowerCase();
                 return (
@@ -66,7 +65,7 @@ const NavigationAuto = () => {
                     href={`/${item.toLowerCase()}`}
                     onClick={() => handleNavClick(item)}
                     className={`relative group transition-colors duration-300 font-medium cursor-pointer ${
-                      isActive ? 'text-orange-500' : 'text-white hover:text-orange-500'
+                      isActive ? 'text-orange-500' : 'text-gray-800 dark:text-white hover:text-orange-500'
                     }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
@@ -77,13 +76,16 @@ const NavigationAuto = () => {
                   </a>
                 );
               })}
+               {/* --- THEME TOGGLE ADDED HERE --- */}
+              <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             </div>
             
-            {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center gap-4">
+               {/* --- THEME TOGGLE FOR MOBILE --- */}
+              <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
               <button 
                 onClick={toggleMobileMenu}
-                className="text-white hover:text-orange-500 transition-colors duration-300 p-2"
+                className="text-gray-800 dark:text-white hover:text-orange-500 transition-colors duration-300 p-2"
                 aria-label="Toggle mobile menu"
               >
                 <svg 
@@ -105,8 +107,7 @@ const NavigationAuto = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        <div className={`md:hidden bg-black bg-opacity-98 backdrop-blur-lg border-t border-gray-800/50 transition-all duration-300 ease-in-out ${
+        <div className={`md:hidden bg-white/95 dark:bg-black/95 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800/50 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen 
             ? 'max-h-96 opacity-100 visible' 
             : 'max-h-0 opacity-0 invisible overflow-hidden'
@@ -122,10 +123,9 @@ const NavigationAuto = () => {
                   className={`block py-3 px-4 rounded-lg transition-all duration-300 font-medium cursor-pointer ${
                     isActive 
                       ? 'text-orange-500 bg-orange-500/10 border-l-4 border-orange-500' 
-                      : 'text-white hover:text-orange-500 hover:bg-gray-800/50 hover:border-l-4 hover:border-orange-500'
+                      : 'text-gray-800 dark:text-white hover:text-orange-500 hover:bg-gray-100 dark:hover:bg-gray-800/50 hover:border-l-4 hover:border-orange-500'
                   }`}
                   style={{ 
-                    animationDelay: `${index * 0.1}s`,
                     transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(-20px)',
                     transition: `all 0.3s ease-in-out ${index * 0.1}s`
                   }}
@@ -145,7 +145,6 @@ const NavigationAuto = () => {
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
       {isMobileMenuOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
