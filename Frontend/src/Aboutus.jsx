@@ -29,13 +29,13 @@ const AboutUsPage = () => {
 
   const teamMembers = [
     {
-      name: "Leela Akshith",
+      name: "Yeshwanth Chintalapudi",
       position: "CEO & Founder",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
       description: "25+ years in construction management, leading projects worth over $500M."
     },
     {
-      name: "Sarah Chen",
+      name: "Bhargav Chintalapudi",
       position: "Chief Architect",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
       description: "Award-winning architect specializing in sustainable commercial designs."
@@ -51,6 +51,31 @@ const AboutUsPage = () => {
       position: "Safety Director",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
       description: "Ensuring the highest safety standards across all construction sites."
+    },
+    // Added 4 more team members below
+    {
+      name: "Priya Singh",
+      position: "Lead Engineer",
+      image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=300&h=300&fit=crop&crop=face",
+      description: "Specialist in structural engineering and innovative building techniques."
+    },
+    {
+      name: "Michael Brown",
+      position: "Finance Manager",
+      image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop&crop=face",
+      description: "Oversees budgeting, cost control, and financial planning for all projects."
+    },
+    {
+      name: "Aisha Al-Farsi",
+      position: "Design Coordinator",
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop&crop=face",
+      description: "Coordinates design teams to ensure creative and functional solutions."
+    },
+    {
+      name: "Carlos Rivera",
+      position: "Procurement Head",
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=300&h=300&fit=crop&crop=face",
+      description: "Manages supplier relationships and ensures timely delivery of materials."
     }
   ];
 
@@ -78,18 +103,21 @@ const AboutUsPage = () => {
   ];
 
   const timelineEvents = [
-    { year: "2016", title: "Company Founded", description: "Feets Infra Projects was established with a mission to deliver quality construction." },
-    { year: "2017", title: "First Residential Project", description: "Successfully completed our flagship residential complex, 'Serene Homes'." },
-    { year: "2018", title: "Commercial Expansion", description: "Ventured into commercial construction with the 'Innovatech Office Park'." },
-    { year: "2019", title: "Quality Excellence Award", description: "Recognized for outstanding quality and safety standards in the region." },
-    { year: "2020", title: "50+ Projects Milestone", description: "Achieved the milestone of completing over 50 projects across various sectors." },
-    { year: "2021", title: "Embracing Sustainability", description: "Integrated LEED-certified green building practices into our core processes." },
-    { year: "2022", title: "Major Infrastructure Contract", description: "Secured our first government contract for the 'Coastal Highway Expansion'." },
-    { year: "2023", title: "Andhra Pradesh Operations", description: "Expanded our operational footprint by opening a new branch in Visakhapatnam." },
-    { year: "2024", title: "Launch of Smart Homes Division", description: "Introduced a new division focused on integrating smart technology in residences." },
-    { year: "2025", title: "Groundbreaking of 'Azure Tower'", description: "Began construction on our most ambitious project, a 50-story mixed-use skyscraper." },
-    { year: "2026", title: "100+ Strong Team", description: "Our dedicated team of professionals grew to over 100 members." },
-    { year: "2027", title: "New Regional Headquarters", description: "Inaugurated a new state-of-the-art regional headquarters to support our growth." }
+    { title: "Company Built", description: "Feets Infra Projects was established with a mission to deliver quality construction." },
+    { title: "Reliance Corporate IT Park Ltd.", description: "End-to-end trenching, OFC laying, splicing, blowing, and chamber installations." },
+    { title: "GMR Infrastructure Ltd.", description: "Construction of booking offices and public utilities across MMTS stations for South Central Railway." },
+    { title: "Jyothirmai Infrastructures", description: "Construction of a government-sanctioned submersible bridge in Telangana." },
+    { title: "Geek Professional Services", description: "G+5 Residential Building Project at Manikonda." },
+    { title: "Silver Oaks International School", description: "Expansion projects tailored to institutional requirements in Bangalore." },
+    { title: "Rainbow Vistas", description: "Interior designing for premium gated community homes." },
+    { title: "L&T Pvt. Ltd", description: "Civil construction support works at IIT Hyderabad Campus." },
+    { title: "Indya Estates Green", description: "Civil construction for residential township development." },
+    { title: "Cybercity Developers", description: "Finishing and allied works for premier developments." },
+    { title: "Villa House", description: "Premium residential construction project in Tandur." },
+    { title: "Swecha Homes", description: "Land development, sale buildings in Tirupati." },
+    { title: "Swecha Greens", description: "RERA-registered layout development in Kodangal." },
+    { title: "Anahata farms", description: "Comprehensive land development and construction of bespoke farm villas — blending nature with premium living spaces." },
+    { title: "Tapovanam", description: "" }
   ];
 
   return (
@@ -119,24 +147,16 @@ const AboutUsPage = () => {
 
             <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light tracking-wide max-w-4xl mx-auto">
-                Established in 2010, we've been 
+                Established in 2016, we've been 
                 <span className="text-gray-800 dark:text-white font-medium"> transforming visions into reality </span>
                 with unwavering commitment to excellence.
               </p>
             </div>
 
             <div className="animate-scale-in flex justify-center space-x-8 md:space-x-12" style={{ animationDelay: '1.2s' }}>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold">15+</div>
+              <div className="text-center mx-auto">
+                <div className="text-3xl md:text-4xl font-bold">7+</div>
                 <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">Years</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold">200+</div>
-                <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold">$500M+</div>
-                <div className="text-sm md:text-base text-gray-500 dark:text-gray-400">Total Value</div>
               </div>
             </div>
           </div>
@@ -162,6 +182,9 @@ const AboutUsPage = () => {
                 </p>
                 <p>
                   Our journey has been shaped by relentless hard work, unwavering values, and a team that shares our dedication to excellence. At Feets Infra Projects, we believe that quality is non-negotiable — and this principle continues to be the foundation of every project we undertake.
+                </p>
+                <p>
+                While the past nine years have been a testament to our resilience and growth, we see this as just the beginning. With a clear vision and a passionate team, we are committed to continuing our journey with integrity, innovation, and excellence.
                 </p>
               </div>
             </div>
@@ -203,7 +226,7 @@ const AboutUsPage = () => {
                     <h1 className="mx-auto font-semibold text-lg text-white">{}</h1>
                   </div>
                   <div className="order-1 bg-gray-50 dark:bg-gray-900/70 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-gray-200 dark:border-gray-800 hover:border-orange-500 transition-all duration-300 transform hover:scale-105">
-                    <h3 className="mb-3 font-bold text-xl">{event.title} <span className="text-orange-500 text-base">({event.year})</span></h3>
+                    <h3 className="mb-3 font-bold text-xl">{event.title} <span className="text-orange-500 text-base"></span></h3>
                     <p className="text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-300">
                       {event.description}
                     </p>
