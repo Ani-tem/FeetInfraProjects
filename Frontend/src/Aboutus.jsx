@@ -77,39 +77,32 @@ const AboutUsPage = () => {
     }
   ];
 
+  const timelineEvents = [
+    { year: "2016", title: "Company Founded", description: "Feets Infra Projects was established with a mission to deliver quality construction." },
+    { year: "2017", title: "First Residential Project", description: "Successfully completed our flagship residential complex, 'Serene Homes'." },
+    { year: "2018", title: "Commercial Expansion", description: "Ventured into commercial construction with the 'Innovatech Office Park'." },
+    { year: "2019", title: "Quality Excellence Award", description: "Recognized for outstanding quality and safety standards in the region." },
+    { year: "2020", title: "50+ Projects Milestone", description: "Achieved the milestone of completing over 50 projects across various sectors." },
+    { year: "2021", title: "Embracing Sustainability", description: "Integrated LEED-certified green building practices into our core processes." },
+    { year: "2022", title: "Major Infrastructure Contract", description: "Secured our first government contract for the 'Coastal Highway Expansion'." },
+    { year: "2023", title: "Andhra Pradesh Operations", description: "Expanded our operational footprint by opening a new branch in Visakhapatnam." },
+    { year: "2024", title: "Launch of Smart Homes Division", description: "Introduced a new division focused on integrating smart technology in residences." },
+    { year: "2025", title: "Groundbreaking of 'Azure Tower'", description: "Began construction on our most ambitious project, a 50-story mixed-use skyscraper." },
+    { year: "2026", title: "100+ Strong Team", description: "Our dedicated team of professionals grew to over 100 members." },
+    { year: "2027", title: "New Regional Headquarters", description: "Inaugurated a new state-of-the-art regional headquarters to support our growth." }
+  ];
+
   return (
     // Updated root container for theme switching
     <div className="w-screen min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white overflow-x-hidden relative transition-colors duration-300">
 
       <Mouse/>    
-      <Animated theme={theme}/>
+     // <Animated theme={theme}/>
       <FloatingIcon/>
       <Navigation theme={theme} toggleTheme={toggleTheme}/>
 
       {/* Hero Section */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 opacity-5 dark:opacity-10"
-            style={{
-              // Swapped colors for light/dark mode
-              backgroundImage: theme === 'light' ? `
-                linear-gradient(30deg, #111827 12%, transparent 12.5%, transparent 87%, #111827 87.5%, #111827),
-                linear-gradient(150deg, #111827 12%, transparent 12.5%, transparent 87%, #111827 87.5%, #111827),
-                linear-gradient(30deg, #111827 12%, transparent 12.5%, transparent 87%, #111827 87.5%, #111827),
-                linear-gradient(150deg, #111827 12%, transparent 12.5%, transparent 87%, #111827 87.5%, #111827)
-              ` : `
-                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
-                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
-                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
-                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff)
-              `,
-              backgroundSize: '80px 140px',
-              backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px',
-            }}
-          />
-        </div>
-
         <div className="relative z-10 text-center w-full px-6">
           <div className="space-y-8 max-w-6xl mx-auto">
             <div className="overflow-hidden">
@@ -188,6 +181,39 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="relative w-full py-20 px-6 bg-white dark:bg-gray-900/30">
+        <div className="max-w-7xl mx-auto">
+           <div className="text-center mb-24">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-orange-500">Our</span>
+                <span> Milestones</span>
+              </h2>
+              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                A journey of growth, innovation, and unwavering commitment to building the future.
+              </p>
+            </div>
+            
+            <div className="relative wrap overflow-hidden p-10 h-full">
+              <div className="absolute left-1/2 w-1 h-full bg-gray-200 dark:bg-gray-700"></div>
+              {timelineEvents.map((event, index) => (
+                <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse left-timeline' : 'right-timeline'}`}>
+                  <div className="order-1 w-5/12"></div>
+                  <div className="z-20 flex items-center order-1 bg-orange-500 shadow-xl w-8 h-8 rounded-full">
+                    <h1 className="mx-auto font-semibold text-lg text-white">{}</h1>
+                  </div>
+                  <div className="order-1 bg-gray-50 dark:bg-gray-900/70 rounded-2xl shadow-xl w-5/12 px-6 py-4 border border-gray-200 dark:border-gray-800 hover:border-orange-500 transition-all duration-300 transform hover:scale-105">
+                    <h3 className="mb-3 font-bold text-xl">{event.title} <span className="text-orange-500 text-base">({event.year})</span></h3>
+                    <p className="text-sm leading-snug tracking-wide text-gray-600 dark:text-gray-300">
+                      {event.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+        </div>
+      </section>
+      {/* --- END TIMELINE SECTION --- */}
 
       {/* Values Section */}
       <section className="relative w-full py-20 px-6 bg-white dark:bg-gray-900/30">

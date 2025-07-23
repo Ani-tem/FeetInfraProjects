@@ -1,0 +1,135 @@
+
+{
+  "allMegaProjects": [
+    {
+      "title": "Skyline Commercial Complex",
+      "category": "Commercial Development",
+      "location": "Downtown Metro City",
+      "value": "$45M",
+      "duration": "Est. Completion 2026",
+      "status": "On Going",
+      "description": "A revolutionary 40-story mixed-use complex currently under construction. This project will redefine the city skyline with its innovative sustainable design and cutting-edge smart building technology.",
+      "highlights": [
+        "Targeting LEED Platinum Certification",
+        "40 floors, 1.2M sq ft",
+        "Smart building automation",
+        "Foundation & Core stage complete",
+        "Underground parking for 500 cars"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "title": "Veridian Eco-Resort",
+      "category": "Hospitality",
+      "location": "Serenity Islands",
+      "value": "$75M",
+      "duration": "Est. Completion 2025",
+      "status": "On Going - Final Phase",
+      "description": "A five-star sustainable luxury resort nearing completion. The project is setting new standards for eco-tourism and environmental preservation in the region, with final installations underway.",
+      "highlights": [
+        "100% solar power grid installed",
+        "On-site water desalination plant operational",
+        "Interior finishing in progress",
+        "Coral reef restoration program active",
+        "Constructed with locally sourced materials"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "title": "Azure Bay Bridge",
+      "category": "Infrastructure",
+      "location": "Coastal Region",
+      "value": "$120M",
+      "duration": "48 months",
+      "status": "Completed 2023",
+      "description": "A landmark 2-mile long cable-stayed bridge connecting two major economic hubs, significantly reducing commute times and fostering regional growth. Engineered to withstand extreme weather conditions.",
+      "highlights": [
+        "Seismic-resistant design",
+        "Six lanes of traffic + pedestrian walkway",
+        "LED architectural lighting",
+        "Reduced regional traffic by 30%",
+        "Fully operational and open to public"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1517524206127-48bbd363f5de?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "title": "Nexus Data Center",
+      "category": "Industrial & Technology",
+      "location": "Silicon Prairie",
+      "value": "$90M",
+      "duration": "24 months",
+      "status": "Completed 2023",
+      "description": "A Tier IV hyperscale data center providing 50MW of critical IT load. Features state-of-the-art cooling technology and multi-layered security protocols to support global cloud infrastructure.",
+      "highlights": [
+        "Tier IV certified for maximum uptime",
+        "50 MW IT load capacity",
+        "Liquid immersion cooling systems",
+        "Biometric and physical security layers",
+        "Now serving major cloud providers"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1522199670076-2852f80289c3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1558004533-2b2c159f8376?w=800&h=600&fit=crop"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Riverside Luxury Homes",
+      "category": "Residential",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop",
+      "value": "$12M",
+      "duration": "18 months",
+      "description": "Exclusive gated community with 24 luxury homes featuring modern architecture and premium finishes."
+    },
+    {
+      "title": "Tech Hub Office Park",
+      "category": "Commercial",
+      "image": "https://images.unsplash.com/photo-1565378420513-b67b62c4fee3?w=400&h=300&fit=crop",
+      "value": "$28M",
+      "duration": "24 months",
+      "description": "State-of-the-art office complex designed for technology companies with flexible co-working spaces."
+    },
+    {
+      "title": "Green Valley Hospital",
+      "category": "Healthcare",
+      "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop",
+      "value": "$35M",
+      "duration": "30 months",
+      "description": "Modern medical facility with advanced equipment and patient-centered design principles."
+    },
+    {
+      "title": "Marina Shopping Center",
+      "category": "Retail",
+      "image": "https://images.unsplash.com/photo-1555529669-2269763671c0?w=400&h=300&fit=crop",
+      "value": "$18M",
+      "duration": "20 months",
+      "description": "Waterfront retail destination with 150 stores, restaurants, and entertainment venues."
+    },
+    {
+      "title": "Industrial Logistics Hub",
+      "category": "Industrial",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop",
+      "value": "$22M",
+      "duration": "16 months",
+      "description": "Automated warehouse and distribution center with advanced logistics technology."
+    },
+    {
+      "title": "University Science Center",
+      "category": "Educational",
+      "image": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+      "value": "$40M",
+      "duration": "32 months",
+      "description": "Cutting-edge research facility with laboratories, lecture halls, and collaborative spaces."
+    }
+  ]
+}

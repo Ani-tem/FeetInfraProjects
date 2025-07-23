@@ -4,7 +4,8 @@ import Floating from './components/FloatIcon.jsx';
 import Footer from './components/footer.jsx';
 import NavigationAuto from './components/Nav.jsx';
 import Mouse from './components/Mouse.jsx';
-
+import Pro from './data/pro.json';
+import MegaProjectItem from './components/megaproject.jsx';
 const ProjectsPage = () => {
   // --- THEME STATE LOGIC ---
   const [theme, setTheme] = useState(() => {
@@ -25,91 +26,26 @@ const ProjectsPage = () => {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
-  // --- END THEME STATE LOGIC ---
   
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const { allMegaProjects, projects } = Pro;
 
-  // Auto-rotate mega project images
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveImageIndex((prev) => (prev + 1) % megaProject.images.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const megaProject = {
-    title: "Skyline Commercial Complex",
-    category: "Commercial Development",
-    location: "Downtown Metro City",
-    value: "$45M",
-    duration: "36 months",
-    status: "Completed 2024",
-    description: "A revolutionary 40-story mixed-use complex featuring office spaces, retail outlets, and luxury residences. This project redefined the city skyline with its innovative sustainable design and cutting-edge smart building technology.",
-    highlights: [
-      "LEED Platinum Certification",
-      "40 floors, 1.2M sq ft",
-      "Smart building automation",
-      "Rooftop garden & solar panels",
-      "Underground parking for 500 cars"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop"
-    ]
-  };
-
-  const projects = [
-    {
-      title: "Riverside Luxury Homes",
-      category: "Residential",
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop",
-      value: "$12M",
-      duration: "18 months",
-      description: "Exclusive gated community with 24 luxury homes featuring modern architecture and premium finishes."
-    },
-    {
-      title: "Tech Hub Office Park",
-      category: "Commercial",
-      image: "https://images.unsplash.com/photo-1565378420513-b67b62c4fee3?w=400&h=300&fit=crop",
-      value: "$28M",
-      duration: "24 months",
-      description: "State-of-the-art office complex designed for technology companies with flexible co-working spaces."
-    },
-    {
-      title: "Green Valley Hospital",
-      category: "Healthcare",
-      image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop",
-      value: "$35M",
-      duration: "30 months",
-      description: "Modern medical facility with advanced equipment and patient-centered design principles."
-    },
-    {
-      title: "Marina Shopping Center",
-      category: "Retail",
-      image: "https://images.unsplash.com/photo-1555529669-2269763671c0?w=400&h=300&fit=crop",
-      value: "$18M",
-      duration: "20 months",
-      description: "Waterfront retail destination with 150 stores, restaurants, and entertainment venues."
-    },
-    {
-      title: "Industrial Logistics Hub",
-      category: "Industrial",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop",
-      value: "$22M",
-      duration: "16 months",
-      description: "Automated warehouse and distribution center with advanced logistics technology."
-    },
-    {
-      title: "University Science Center",
-      category: "Educational",
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
-      value: "$40M",
-      duration: "32 months",
-      description: "Cutting-edge research facility with laboratories, lecture halls, and collaborative spaces."
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); // A short delay ensures the page has rendered
     }
-  ];
+  }, []); // Empty array ensures this runs only once on page load
+
+  // Filter projects into two groups
+  const ongoingMegaProjects = allMegaProjects.filter(p => p.status.toLowerCase().includes('on going'));
+  const completedMegaProjects = allMegaProjects.filter(p => p.status.toLowerCase().startsWith('completed'));
+
 
   return (
     <div className="w-screen min-h-screen bg-white dark:bg-black text-gray-800 dark:text-white overflow-x-hidden relative transition-colors duration-300">
@@ -121,7 +57,7 @@ const ProjectsPage = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <div 
+          <div
             className="absolute inset-0 opacity-5 dark:opacity-10"
             style={{
               backgroundImage: `
@@ -133,7 +69,6 @@ const ProjectsPage = () => {
             }}
           />
         </div>
-
         <div className="relative z-10 text-center w-full px-6">
           <div className="space-y-8 max-w-6xl mx-auto">
             <div className="overflow-hidden">
@@ -147,15 +82,13 @@ const ProjectsPage = () => {
                 </span>
               </h1>
             </div>
-
             <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light tracking-wide max-w-4xl mx-auto">
-                Discover our portfolio of 
+                Discover our portfolio of
                 <span className="text-orange-500 font-medium"> exceptional constructions </span>
                 that shape skylines and transform communities.
               </p>
             </div>
-
             <div className="animate-scale-in flex justify-center space-x-8 md:space-x-12" style={{ animationDelay: '1.2s' }}>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-orange-500">500+</div>
@@ -174,101 +107,50 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      {/* Featured Mega Project Section */}
-      <section className="relative w-full py-20 px-6 bg-gray-50 dark:bg-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span>Featured</span>
-              <span className="text-orange-500"> Mega Project</span>
-            </h2>
-            <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our crown jewel that showcases our capability to handle large-scale, complex constructions.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src={megaProject.images[activeImageIndex]}
-                  alt={megaProject.title}
-                  className="w-full h-96 lg:h-[500px] object-cover transition-opacity duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {megaProject.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveImageIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === activeImageIndex ? 'bg-orange-500' : 'bg-gray-400 dark:bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-              
-              <div className="absolute -top-8 -right-8 bg-orange-500 text-white p-6 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">{megaProject.value}</div>
-                <div className="text-xs opacity-90">Project Value</div>
-              </div>
+      {/* --- WRAPPER FOR MEGA PROJECTS SECTIONS --- */}
+      <div className="bg-gray-50 dark:bg-black">
+        {/* On Going Projects Section */}
+        <section id="ongoing" className="relative w-full py-20 px-6 scroll-mt-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-blue-500">On Going</span>
+                <span> Mega Projects</span>
+              </h2>
+              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                A glimpse into the future we are currently building.
+              </p>
             </div>
-
-            <div className="space-y-8">
-              <div>
-                <div className="inline-block px-4 py-2 bg-orange-500/10 text-orange-500 rounded-full text-sm font-semibold mb-4">
-                  {megaProject.category}
-                </div>
-                <h3 className="text-3xl lg:text-4xl font-bold mb-4">
-                  {megaProject.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-                  {megaProject.description}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="space-y-1">
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Location</div>
-                  <div className="font-semibold">{megaProject.location}</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Duration</div>
-                  <div className="font-semibold">{megaProject.duration}</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Status</div>
-                  <div className="text-green-500 font-semibold">{megaProject.status}</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Value</div>
-                  <div className="text-orange-500 font-bold">{megaProject.value}</div>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-bold mb-4">Key Highlights</h4>
-                <ul className="space-y-2">
-                  {megaProject.highlights.map((highlight, index) => (
-                    <li key={index} className="flex items-center text-gray-600 dark:text-gray-300">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0" />
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="group relative px-8 py-4 bg-orange-500 text-white rounded-full font-semibold overflow-hidden transition-all duration-300 hover:bg-orange-600 hover:scale-105">
-                <span className="relative z-10">View Full Case Study</span>
-              </button>
+            <div className="space-y-24">
+              {ongoingMegaProjects.map((project, index) => (
+                <MegaProjectItem key={index} project={project} />
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Projects Grid Section */}
+        {/* Completed Projects Section */}
+        <section id="completed" className="relative w-full pt-10 pb-20 px-6 scroll-mt-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-green-500">Completed</span>
+                <span> Mega Projects</span>
+              </h2>
+              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Our landmark achievements that define our legacy of excellence.
+              </p>
+            </div>
+            <div className="space-y-24">
+              {completedMegaProjects.map((project, index) => (
+                <MegaProjectItem key={index} project={project} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Projects Grid Section (for smaller projects) */}
       <section className="relative w-full py-20 px-6 bg-white dark:bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -277,34 +159,30 @@ const ProjectsPage = () => {
               <span className="text-orange-500"> Projects</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Explore our diverse portfolio of completed projects across various sectors.
+              Explore our diverse portfolio of successfully delivered projects across various sectors.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className="group relative bg-gray-50 dark:bg-gray-900/70 rounded-2xl backdrop-blur-sm border border-gray-200 dark:border-gray-800 hover:border-orange-500 transition-all duration-500 overflow-hidden hover:scale-105 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
-                  <img 
+                  <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  
                   <div className="absolute top-4 left-4 px-3 py-1 bg-orange-500/90 text-white text-sm font-semibold rounded-full">
                     {project.category}
                   </div>
-                  
                   <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 text-white text-sm font-semibold rounded-full backdrop-blur-sm">
                     {project.value}
                   </div>
                 </div>
-
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-orange-500 transition-colors duration-300">
                     {project.title}
@@ -312,7 +190,6 @@ const ProjectsPage = () => {
                   <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-gray-500 dark:text-gray-400 text-sm">{project.duration}</span>
                     <button className="text-orange-500 hover:text-orange-400 transition-colors duration-300 font-semibold text-sm">
@@ -337,13 +214,12 @@ const ProjectsPage = () => {
             From concept to completion, we bring your vision to life with precision and excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
+            <a
              href='/contact'
             className="group relative px-8 py-4 bg-orange-500 text-white rounded-full font-semibold text-lg overflow-hidden transition-all duration-300 hover:bg-orange-600 hover:scale-105">
               <span className="relative z-10">Get Free Quote</span>
             </a>
-
-            <a 
+            <a
             href='/public/infra.pdf'
             target='_blanck'
             className="group relative px-8 py-4 border-2 border-orange-500 text-orange-500 rounded-full font-semibold text-lg overflow-hidden transition-all duration-300 hover:text-white hover:scale-105">
@@ -355,7 +231,6 @@ const ProjectsPage = () => {
       </section>
 
       <Footer/>
-     
     </div>
   );
 };
