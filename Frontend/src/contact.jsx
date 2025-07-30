@@ -150,23 +150,23 @@ const ContactPage = () => {
                 <span className="text-2xl">📞</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Call Us</h3>
-              <p className="text-gray-500 dark:text-gray-400">+91 98765 43210</p>
-              <p className="text-gray-500 dark:text-gray-400">+91 87654 32109</p>
+              <p className="text-gray-500 dark:text-gray-400">+91 86863 13543</p>
+              <p className="text-gray-500 dark:text-gray-400">+91 81798 71443</p>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">📧</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-gray-500 dark:text-gray-400">info@feetinfra.com</p>
-              <p className="text-gray-500 dark:text-gray-400">projects@feetinfra.com</p>
+              <p className="text-gray-500 dark:text-gray-400">FIP@feetsinfraprojects.com</p>
+              <p className="text-gray-500 dark:text-gray-400"></p>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">📍</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-              <p className="text-gray-500 dark:text-gray-400">123 Construction Ave</p>
+              <p className="text-gray-500 dark:text-gray-400">Flat No 1268, Prestige High Fields,</p>
               <p className="text-gray-500 dark:text-gray-400">Hyderabad, Telangana</p>
             </div>
           </div>
@@ -270,33 +270,15 @@ const ContactPage = () => {
                             className={`w-full px-4 py-3 bg-gray-100 dark:bg-black dark:bg-opacity-50 border ${formErrors.service ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'} rounded-lg focus:border-orange-500 focus:outline-none transition-colors duration-300`}
                           >
                             <option value="">Select a service</option>
-                            <option value="residential">Residential Construction</option>
                             <option value="commercial">Commercial Construction</option>
-                            <option value="industrial">Industrial Projects</option>
-                            <option value="renovation">Renovation & Remodeling</option>
-                            <option value="consultation">Project Consultation</option>
+                            <option value="residential">Residential Building</option>
+                            <option value="plots">Open Plots</option>
+                            <option value="joint ventures">Joint Ventures</option>
                             <option value="other">Other</option>
                           </select>
                           {formErrors.service && <p className="text-red-500 text-sm mt-1">{formErrors.service}</p>}
                         </div>
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">
-                            Project Budget
-                          </label>
-                          <select
-                            name="budget"
-                            value={formData.budget}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-gray-100 dark:bg-black dark:bg-opacity-50 border border-gray-300 dark:border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none transition-colors duration-300"
-                          >
-                            <option value="">Select budget range</option>
-                            <option value="under-10">Under ₹10 Lakhs</option>
-                            <option value="10-50">₹10 - ₹50 Lakhs</option>
-                            <option value="50-100">₹50 Lakhs - ₹1 Crore</option>
-                            <option value="1-5">₹1 - ₹5 Crores</option>
-                            <option value="above-5">Above ₹5 Crores</option>
-                          </select>
-                        </div>
+                        {/* Removed Project Budget select field */}
                       </div>
 
                       <div>
@@ -330,11 +312,11 @@ const ContactPage = () => {
                 <div className="space-y-8">
                   
                   <div className="bg-white dark:bg-gray-900 dark:bg-opacity-50 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
-                    <h3 className="text-2xl font-bold mb-6 text-orange-500">Why Choose FEET INFRA?</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-orange-500">Why Choose FEETS INFRA?</h3>
                     <div className="space-y-4">
                       {[
-                        { icon: '🏗️', title: '15+ Years Experience', desc: 'Proven track record in construction excellence' },
-                        { icon: '⭐', title: '200+ Projects Completed', desc: 'Residential, commercial, and industrial projects' },
+                        { icon: '🏗️', title: '7+ Years Experience', desc: 'Proven track record in construction excellence' },
+                        { icon: '⭐', title: 'Many Clients Satisfied', desc: 'Trust and satisfaction of numerous clients' },
                         { icon: '🔧', title: 'Expert Team', desc: 'Skilled architects, engineers, and craftsmen' },
                         { icon: '✅', title: '100% Quality Assurance', desc: 'Every project meets the highest standards' }
                       ].map((item, index) => (
@@ -351,28 +333,6 @@ const ContactPage = () => {
                     </div>
                   </div>
 
-                  <div className="bg-white dark:bg-gray-900 dark:bg-opacity-50 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
-                    <h3 className="text-2xl font-bold mb-6 text-orange-500">Office Hours</h3>
-                    <div className="space-y-3">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Monday - Friday</span>
-                        <span className="font-semibold">9:00 AM - 6:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Saturday</span>
-                        <span className="font-semibold">9:00 AM - 4:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Sunday</span>
-                        <span className="text-red-500 dark:text-red-400">Closed</span>
-                      </div>
-                      <div className="mt-4 p-3 bg-orange-100 dark:bg-orange-500 dark:bg-opacity-20 rounded-lg border border-orange-200 dark:border-orange-500 dark:border-opacity-50">
-                        <p className="text-sm text-orange-700 dark:text-orange-300">
-                          🚨 Emergency services available 24/7 for ongoing projects
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
