@@ -43,21 +43,18 @@ const startServer = async () => {
   try {
     // Test database connection
     await testConnection();
-    console.log('✅ Database connection successful');
+    console.log('Database connection successful');
     
     // Create default admin user
     await createDefaultAdmin();
     
     // Start the server
     app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
-      console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
-      console.log(`👤 Default admin credentials:`);
-      console.log(`   Username: admin`);
-      console.log(`   Password: admin123`);
+      console.log(` Server running on port ${PORT}`);
+      console.log(`Health check: http://localhost:${PORT}/api/health`);
     });
   } catch (error) {
-    console.error('❌ Failed to connect to the database or start server:', error);
+    console.error(' Failed to connect to the database or start server:', error);
     process.exit(1);
   }
 };
